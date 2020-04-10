@@ -14,7 +14,18 @@ from sklearn.metrics import fbeta_score, precision_recall_fscore_support, confus
 ########## training functions ##########
 
 def load_generators(train_dir, batch_size, val_split=0.3, class_mode='categorical'):
-    
+    '''
+    create image generators for training data with validation set. The provided
+    directory for train_dir must contain images in their respective class label
+    subdir.
+        - train_dir (path): path to training data directory containing subdirs
+        - batch_size (int): batch size for loading
+        - val_split (float): default=0.3; Float to represent proportion of data
+        to include in validation set
+        - class_mode (str): default='categorical'; Class mode for image generator.
+    Returns:
+        - training and validation generators
+    '''
     train_gen = ImageDataGenerator(
         rescale=1.0/255.0, rotation_range=60, width_shift_range=0.3,
         height_shift_range=0.3, shear_range=0.3, zoom_range=0.3,
@@ -33,7 +44,14 @@ def load_generators(train_dir, batch_size, val_split=0.3, class_mode='categorica
     return train_generator, valid_generator
 
 def compile_model(input_shape, n_classes, optimizer, fine_tune=None):
-    
+    '''
+    compile a keras model with the pre-trained VGG16 convolutional base
+        - input_shape (tuple): shape of input images 
+        - n_classes (int): expected num class labels in the output layer
+        - optimizer (keras optimier): A keras optimizer 
+        - fine_tune (int): default=None; int to select layers from VGG16 convolutional
+        base for unfreezing. Layers will be selected through list slicing 'base.layers[int: ]'
+    '''
     conv_base = VGG16(include_top=False,
                      weights='imagenet', 
                      input_shape=input_shape,
@@ -57,7 +75,9 @@ def compile_model(input_shape, n_classes, optimizer, fine_tune=None):
     return model
 
 def plot_history(history):
-       
+    '''
+    plot training accuracy and loss across epochs
+    '''
     acc = history.history['categorical_accuracy']
     val_acc = history.history['val_categorical_accuracy']
     loss = history.history['loss']
@@ -110,7 +130,3 @@ def plot_predictions(y_true, y_preds, test_generator, class_indices):
                      color=("green" if pred_idx == true_idx else "red"))
         
         plt.show(block=True);
-
-########## evaluation functions ##########
-
-        
