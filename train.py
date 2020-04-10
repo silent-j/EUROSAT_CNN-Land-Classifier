@@ -29,7 +29,6 @@ def parse_args():
 if __name__=="__main__":
 
     args = parse_args()
-    
     TRAIN_DIR  = args.train_dir
     TEST_DIR = args.test_dir
     SAVE_PATH = args.save_path
@@ -39,17 +38,21 @@ if __name__=="__main__":
     INPUT_SHAPE = (64, 64, 3)
     FINE_TUNE = args.fine_tune
     EVAL = args.eval
-     
     
+    if FINE_TUNE:
+        print("fine-tuning is on...")
+    # load image generators
     train_gen, valid_gen = load_generators(TRAIN_DIR, batch_size=BATCH_SIZE, val_split=0.3)
     
     N_STEPS = train_gen.samples//BATCH_SIZE
     N_VAL_STEPS = valid_gen.samples//BATCH_SIZE
     
+    # optimizer
     optim = Adagrad(lr=args.learn_rate)
-  
+    
+    # compile the model
     print("compiling..")
-    model = compile_model(INPUT_SHAPE, NUM_CLASSES, optim, fine_tune=14)
+    model = compile_model(INPUT_SHAPE, NUM_CLASSES, optim, fine_tune=None)
     model.summary()
     
     print("loading model callbacks..")
@@ -72,7 +75,7 @@ if __name__=="__main__":
                                  validation_data=valid_gen,
                                  validation_steps=N_VAL_STEPS)
             
-    # turn on fine tuning after inital training
+    # fine-tuning is on by default
     if FINE_TUNE:
         
         train_gen.reset()
