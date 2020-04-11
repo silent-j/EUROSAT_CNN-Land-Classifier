@@ -2,6 +2,8 @@
 
 The repository is dedicated to an independent data science project, for completion of the Udacity Data Science Nanodegree. This project leverages the application of transfer learning on satellite image data. The task is to successfully predict the type of land coverage in a given satellite photo. The capacity to distinguish geographic features from satellite images can be essential for a variety of applications including environmental surveying, risk assessment, and urban planning. Using deep learning for the monitoring of land cover can streamline  tasks previously conducted by human analysts using bulkier GIS interfaces. 
 
+The accompanying blog post about this project can be found here: https://medium.com/@james23mcdermott/land-cover-classification-using-keras-9f9036a07a3
+
 ### Problem Statement:
 The goal of this project is to create a solution that can classify an image as 1 of 10 different land covers. This will be achieved by  training a CNN to accurately and rapidly predict land cover labels for .jpg files. The end solution should be able to take an image file as an input, and produce the predicated class label and probability along with the inputted image. 
 
@@ -12,7 +14,7 @@ The goal of this project is to create a solution that can classify an image as 1
 4. Deployment of the model to a Flask web service
 
 ### Evaluation Metrics:
-As this is a mutli-class problem, the evaluation metrics used in determining model performance will be Precision, Recall and a Macro-average F-beta score. I have set out to achieve a minimum Global F-score of 0.85 or greater. An F-beta
+As this is a mutli-class problem, the evaluation metrics used in determining model performance will be Precision, Recall and a Macro-average F-beta score. I have set out to achieve a minimum Global F-score of 0.85 or greater.
 
 # II. Requirements & Dependencies:
 
