@@ -24,7 +24,7 @@ def process_input(input_path):
 def predict(img_array):
     probs = model.predict(img_array)
     pred_class_index = np.argmax(probs, axis=1)    
-    class_indices = r'C:\Users\James\Desktop\EUROSAT\class_indices.npy'
+    class_indices = r'..\..\class_indices.npy'
     class_indices = np.load(class_indices).item()
     pred_class_label = [k for k in class_indices.keys() if class_indices[k] == pred_class_index]
     pred_prob = probs.flatten()[pred_class_index].item()    
@@ -36,7 +36,7 @@ def predict_classes(img_array):
     
     probs = model.predict(img_array)
     probs = [np.round(p, 5) for p in probs.flatten()]
-    class_indices = r'C:\Users\James\Desktop\EUROSAT\class_indices.npy'
+    class_indices = r'..\..\class_indices.npy'
     class_indices = np.load(class_indices).item()
     class_probs = dict(zip(class_indices.keys(), probs))
     
