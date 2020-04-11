@@ -66,7 +66,10 @@ The repo contains command-line applications for training a model, and for predic
   
 ## b. Deploying model as REST API:
 
-1. 
+1. open a terminal in api subdirectory; enter 'flask run'
 
-2. 
+2. open a new terminal; enter 'python run_prediction.py [-h] PATH_TO_IMAGE.JPG
+
+# Acknowledgements
+
 
