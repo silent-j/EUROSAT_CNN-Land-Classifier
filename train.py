@@ -14,11 +14,11 @@ def parse_args():
     parser.add_argument('test_dir', action='store', type=str)
     parser.add_argument('save_path', action='store', type=str)
     parser.add_argument('--epochs', action='store', dest='epochs',
-                       type=int, default=10)
+                       type=int, default=100)
     parser.add_argument('--lr', action='store', dest='learn_rate',
                        type=float, default=0.01)
     parser.add_argument('--batch_size', action='store', dest='batch_size',
-                       type=int, default=64)
+                       type=int, default=128)
     parser.add_argument('--fine_tune', action='store_true',
                         default=True)
     parser.add_argument('--eval', action='store_true',
