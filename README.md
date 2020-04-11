@@ -22,20 +22,22 @@ The dataset contains 27,000 64x64p Sentinel-2 Images in RGB mode of various land
 # III. Files:
 
   - repo
-    -- \predict.py
+  
+    -- \predict.py: command-line application to predict land cover on an image file
     
-    -- \preprocessing.py
+    -- \preprocessing.py: command-line application to split the dataset directory into training & testing directories
     
-    -- \train.py
+    -- \train.py: command-line application for training a model
     
-    -- \utils.py
+    -- \utils.py: utility file
     
-    -- \EUROSAT_NB.ipynb
+    -- \EUROSAT_NB.ipynb: data exploration, model training and evaluation
     
-    - api
-      -- \app.py
+    -- \api
+    
+      -- \app.py: Deploy trained model to API endpoint using Flask
 
-      -- \run_prediction.py
+      -- \run_prediction.py: command-line application for predicting land cover on an image file
 
 # IV. Directions:
 
