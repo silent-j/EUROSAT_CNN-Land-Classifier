@@ -25,6 +25,8 @@ Data is provided publicly by the Deutsches Forschungszentrum für Künstliche In
 
 The dataset contains 27,000 64x64p Sentinel-2 Images in RGB mode of various land classifications. The dataset is divided into 10 class labels ranging from natural to urban geographic features. The data can be downloaded, and passing the path to the data's directory as an argument to preprocessing.py will split the dataset into training and testing directories, based on a provided 'test_size' argument. Class size distributions and labels are explored in the jupyter notebook.
 
+Data must be downloaded at: http://madm.dfki.de/downloads
+
 # IV. Files:
 
   - repo
