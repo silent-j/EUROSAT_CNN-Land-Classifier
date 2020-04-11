@@ -58,7 +58,8 @@ def compile_model(input_shape, n_classes, optimizer, fine_tune=None):
     output_layer = Dense(n_classes, activation='softmax')(top_model)
     
     model = Model(inputs=conv_base.input, outputs=output_layer)
-        
+    
+    # slice from passed int index to unfreeze layers
     if type(fine_tune) == int:
         for layer in conv_base.layers[fine_tune:]:
             layer.trainable = True
