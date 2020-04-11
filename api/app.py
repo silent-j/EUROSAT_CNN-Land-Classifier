@@ -7,7 +7,7 @@ import numpy as np
 from tensorflow.keras import backend
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import img_to_array
-from tensorflow.keras.applications.vgg16 import preprocess_input, decode_predictions
+from tensorflow.keras.applications.vgg16 import preprocess_input
 
 from flask import request
 from flask import jsonify
@@ -17,9 +17,7 @@ app = Flask(__name__)
 global model, graph
 
 graph = tf.get_default_graph()
-model = load_model(r'C:\Users\James\Desktop\EUROSAT\app\vgg16_eurosat.h5')
-
-class_labels = np.load(r'C:\Users\James\Desktop\EUROSAT\class_indices.npy')
+model = load_model('vgg16_eurosat.h5')
 
 def process_image(image, target):
     if image.mode != 'RGB':
