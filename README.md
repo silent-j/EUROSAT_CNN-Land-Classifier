@@ -1,8 +1,14 @@
-# DSND-CapstoneProject-SatelliteImageCNN
+# I. Project Overview
 
-The repository is dedicated to an independent data science project, for completion of the Udacity Data Science Nanodegree. This project leverages the application of transfer learning on satellite image data. The task is to successfully predict the type of land coverage in a given satellite photo. 
+The repository is dedicated to an independent data science project, for completion of the Udacity Data Science Nanodegree. This project leverages the application of transfer learning on satellite image data. The task is to successfully predict the type of land coverage in a given satellite photo. The capacity to distinguish geographic features from satellite images can be essential for a variety of applications including environmental surveying, risk assessment, and urban planning. Using deep learning for the monitoring of land cover can streamline  tasks previously conducted by human analysts using bulkier GIS interfaces. 
 
-# I. Requirements & Dependencies:
+### Problem Statement:
+The goal of this project is to create a solution that can classify an image as 1 of 10 different land covers. This will be achieved by  training a CNN to accurately and rapidly predict land cover labels for .jpg files. The end solution should be able to take an image file as an input, and produce the predicated class label and probability along with the inputted image. 
+
+### Evaluation Metrics:
+As this is a mutli-class problem, the evaluation metrics used in determining model performance will be Precision, Recall and a Macro-average F-beta score. I have set out to achieve a minimum Global F-score of 0.85 or greater. An F-beta
+
+# II. Requirements & Dependencies:
 
 - Python 3.x
 
@@ -14,12 +20,12 @@ The repository is dedicated to an independent data science project, for completi
 
 Model training was completed in a GPU-enabled Kaggle kernel.  
 
-# II. Data:
+# III. Data:
 Data is provided publicly by the Deutsches Forschungszentrum für Künstliche Intelligenz (German Research Center for Artificial Intelligence). 
 
 The dataset contains 27,000 64x64p Sentinel-2 Images in RGB mode of various land classifications. The dataset is divided into 10 class labels ranging from natural to urban geographic features. The data can be downloaded, and passing the path to the data's directory as an argument to preprocessing.py will split the dataset into training and testing directories, based on a provided 'test_size' argument. Class size distributions and labels are explored in the jupyter notebook.
 
-# III. Files:
+# IV. Files:
 
   - repo
   
@@ -39,7 +45,7 @@ The dataset contains 27,000 64x64p Sentinel-2 Images in RGB mode of various land
 
       - \run_prediction.py: command-line application for predicting land cover on an image file
 
-# IV. Usage:
+# V. Usage:
 The repo contains command-line applications for training a model, and for predicting land cover in an input image using the trained model. The model can also be deployed as a simple REST API.
 
 ## a. Running train.py and predict.py:
