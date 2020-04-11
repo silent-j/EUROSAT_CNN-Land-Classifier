@@ -5,6 +5,12 @@ The repository is dedicated to an independent data science project, for completi
 ### Problem Statement:
 The goal of this project is to create a solution that can classify an image as 1 of 10 different land covers. This will be achieved by  training a CNN to accurately and rapidly predict land cover labels for .jpg files. The end solution should be able to take an image file as an input, and produce the predicated class label and probability along with the inputted image. 
 
+### Required Deliverables:
+1. A Jupyter Notebook showcasing data exploration and model tuning
+2. A command-line application to facilitate the training of a model
+3. A command-line application to allow for prediction of an image
+4. Deployment of the model to a Flask web service
+
 ### Evaluation Metrics:
 As this is a mutli-class problem, the evaluation metrics used in determining model performance will be Precision, Recall and a Macro-average F-beta score. I have set out to achieve a minimum Global F-score of 0.85 or greater. An F-beta
 
