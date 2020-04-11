@@ -50,9 +50,9 @@ The repo contains command-line applications for training a model, and for predic
 
 3. run train.py:
 
-  - [-h]train_dir str, training set directory
-  - [-h]test_dir str, testing set directory
-  - [-h]save_path str, path to save trained model to
+  - [-h] train_dir str, training set directory
+  - [-h] test_dir str, testing set directory
+  - [-h] save_path str, path to save trained model to
   - [--epochs] default=10, number of epochs for training
   - [--lr] default=0.01, learning rate
   - [--batch_size] default=64, batch size for image generators
@@ -61,8 +61,8 @@ The repo contains command-line applications for training a model, and for predic
 
 4. run predict.py:
 
-  - [-h]input_path str, path to image file for prediction
-  - [-h]model_path str, path to trained model
+  - [-h] input_path str, path to image file for prediction
+  - [-h] model_path str, path to trained model
   
 ## b. Deploying model as REST API:
 
@@ -70,6 +70,8 @@ The repo contains command-line applications for training a model, and for predic
 
 2. open a new terminal; enter 'python run_prediction.py [-h] PATH_TO_IMAGE.JPG
 
-# Acknowledgements
+# Sources
 
+- Deutsches Forschungszentrum für Künstliche Intelligenz (German Research Center for Artificial Intelligence): http://madm.dfki.de/downloads
+- Keras.io: https://blog.keras.io/building-a-simple-keras-deep-learning-rest-api.html
 
