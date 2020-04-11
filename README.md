@@ -61,9 +61,9 @@ The repo contains command-line applications for training a model, and for predic
   - [-h] train_dir str, training set directory
   - [-h] test_dir str, testing set directory
   - [-h] save_path str, path to save trained model to
-  - [--epochs] default=10, number of epochs for training
+  - [--epochs] default=100, number of epochs for training
   - [--lr] default=0.01, learning rate
-  - [--batch_size] default=64, batch size for image generators
+  - [--batch_size] default=128, batch size for image generators
   - [--fine_tune] default=True, turns on fine-tuning during the training process
   - [--eval] default=True, evaluate model performance on testing data. Display performance metrics
 
