@@ -21,7 +21,7 @@ The dataset contains 27,000 64x64p Sentinel-2 Images in RGB mode of various land
 
 # III. Files:
 
-  - repo\
+  - repo\\
     -- predict.py
     
     -- preprocessing.py
@@ -30,10 +30,13 @@ The dataset contains 27,000 64x64p Sentinel-2 Images in RGB mode of various land
     
     -- utils.py
     
-  - api\
-    -- app.py
+    -- EUROSAT_NB.ipynb
     
-    -- run_prediction.py
+    - api\\
+      -- app.py
+
+      -- run_prediction.py
 
 # IV. Directions:
+
 
