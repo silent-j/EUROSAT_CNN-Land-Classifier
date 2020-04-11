@@ -56,7 +56,7 @@ if __name__=="__main__":
     model.summary()
     
     print("loading model callbacks..")
-    MODEL_WEIGHTS = '\\'.join(SAVE_PATH.split('\\')[:-1])+'\\model.weights.best.hdf5'
+    MODEL_WEIGHTS = '\\'.join(SAVE_PATH.split('\\')[:-1])+'\\model.weights.best.hdf5' # use model's save path to also save weights
     checkpoint = ModelCheckpoint(filepath=MODEL_WEIGHTS, #save weights in same loc as model
                         monitor='val_categorical_accuracy',
                         save_best_only=True,
