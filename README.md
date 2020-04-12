@@ -14,7 +14,8 @@ The goal of this project is to create a solution that can classify an image as 1
 4. Deployment of the model to a Flask web service
 
 ### Evaluation Metrics:
-The metrics considered in determining model performance will be Precision, Recall and an F-beta  score globally averaged. I have set out to achieve a Global F-score of 0.8 or greater. 
+The categorical accuracy of the validation data is monitored during the training process. As this is a multi-class problem, it will be useful to be able to generalize the overall model performance through the evaluation of some common information retrieval metrics. A confusion matrix will also be used to visualize misclassifications of subsets of data. 
+The metrics considered in assessing model performance will be Precision, Recall and an F-beta  score, globally averaged. I have set out to achieve a Global F-score of 0.8 or greater. An F-Score is the weighted harmonic mean between the precision and recall of predictions. It allows for a streamlined interpretation of how the model is performing in predicting all classes. The decision to micro-average vs. over macro-averaging was made in order to achieve a single score across all classes. Precision, recall and a confusion matrix are used to evaluate individual class performance.
 
 # II. Requirements & Dependencies
 
