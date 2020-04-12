@@ -1,22 +1,22 @@
 # I. Project Overview
 
-The repository is dedicated to an independent data science project, for completion of the Udacity Data Science Nanodegree. This project leverages the application of transfer learning on satellite image data. The task is to successfully predict the type of land coverage in a given satellite photo. The capacity to distinguish geographic features from satellite images can be essential for a variety of applications including environmental surveying, risk assessment, and urban planning. Using deep learning for the monitoring of land cover can streamline  tasks previously conducted by human analysts using bulkier GIS interfaces. 
+The repository is dedicated to an independent data science project for completion of the Udacity Data Science Nanodegree. This project leverages the application of transfer learning on satellite image data. The task is to successfully predict the type of land coverage in a given satellite photo. The capacity to distinguish geographic features from satellite images can be essential for a variety of applications including environmental surveying, risk assessment, and urban planning. Using deep learning for the monitoring of land cover can streamline  tasks previously conducted by human analysts using conventional GIS softwares. 
 
 The accompanying blog post about this project can be found here: https://medium.com/@james23mcdermott/land-cover-classification-using-keras-9f9036a07a3
 
-### Problem Statement:
-The goal of this project is to create a solution that can classify an image as 1 of 10 different land covers. This will be achieved by  training a CNN to accurately and rapidly predict land cover labels for .jpg files. The end solution should be able to take an image file as an input, and produce the predicated class label and probability along with the inputted image. 
+### Objective:
+The goal of this project is to create a solution that can classify an image as 1 of 10 different land cover types. This will be achieved by  training a CNN with a pre-trained model architecture. The end solution should be able to take an image file as an input, and plot the photo with predicted class label and probability. 
 
-### Required Deliverables:
+### Deliverables:
 1. A Jupyter Notebook showcasing data exploration and model tuning
 2. A command-line application to facilitate the training of a model
 3. A command-line application to allow for prediction of an image
 4. Deployment of the model to a Flask web service
 
 ### Evaluation Metrics:
-As this is a mutli-class problem, the evaluation metrics used in determining model performance will be Precision, Recall and a Macro-average F-beta score. I have set out to achieve a minimum Global F-score of 0.85 or greater.
+The metrics considered in determining model performance will be Precision, Recall and an F-beta  score globally averaged. I have set out to achieve a Global F-score of 0.8 or greater. 
 
-# II. Requirements & Dependencies:
+# II. Requirements & Dependencies
 
 - Python 3.x
 
@@ -28,14 +28,14 @@ As this is a mutli-class problem, the evaluation metrics used in determining mod
 
 Model training was completed in a GPU-enabled Kaggle kernel.  
 
-# III. Data:
+# III. Data
 Data is provided publicly by the Deutsches Forschungszentrum für Künstliche Intelligenz (German Research Center for Artificial Intelligence). 
 
 The dataset contains 27,000 64x64p Sentinel-2 Images in RGB mode of various land classifications. The dataset is divided into 10 class labels ranging from natural to urban geographic features. The data can be downloaded, and passing the path to the data's directory as an argument to preprocessing.py will split the dataset into training and testing directories, based on a provided 'test_size' argument. Class size distributions and labels are explored in the jupyter notebook.
 
 Data must be downloaded at: http://madm.dfki.de/downloads
 
-# IV. Files:
+# IV. Files
 
   - repo
   
@@ -55,7 +55,7 @@ Data must be downloaded at: http://madm.dfki.de/downloads
 
       - \run_prediction.py: command-line application for predicting land cover on an image file
 
-# V. Usage:
+# V. Usage
 The repo contains command-line applications for training a model, and for predicting land cover in an input image using the trained model. The model can also be deployed as a simple REST API.
 
 ## a. Running train.py and predict.py:
@@ -86,7 +86,7 @@ The repo contains command-line applications for training a model, and for predic
 
 2. open a new terminal; enter 'python run_prediction.py [-h] PATH_TO_IMAGE.JPG
 
-# Sources
+# VI. Sources
 
 - Deutsches Forschungszentrum für Künstliche Intelligenz (German Research Center for Artificial Intelligence): http://madm.dfki.de/downloads
 - Keras.io: https://blog.keras.io/building-a-simple-keras-deep-learning-rest-api.html
