@@ -1,6 +1,6 @@
 # I. Project Overview
 
-The repository is dedicated to an independent data science project for completion of the Udacity Data Science Nanodegree. This project leverages the application of transfer learning on satellite image data. The task is to successfully predict the type of land coverage in a given satellite photo. The capacity to distinguish geographic features from satellite images can be essential for a variety of applications including environmental surveying, risk assessment, and urban planning. Using deep learning for the monitoring of land cover can streamline  tasks previously conducted by human analysts using conventional GIS softwares. 
+The repository is dedicated to an independent data science project for completion of the Udacity Data Science Nanodegree. This project leverages the application of transfer learning on satellite image data. The capacity to distinguish geographic features from satellite images can be essential for a variety of applications including environmental surveying, risk assessment, and urban planning. Using deep learning for the monitoring of land cover can streamline  tasks previously conducted by human analysts using conventional GIS softwares. 
 
 The accompanying blog post about this project can be found here: https://medium.com/@james23mcdermott/land-cover-classification-using-keras-9f9036a07a3
 
